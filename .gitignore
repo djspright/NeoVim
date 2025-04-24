@@ -1,0 +1,45 @@
+# .gitignore for NeoVim configuration using LazyVim (Merged)
+
+# --- Standard NeoVim/Vim temporary files ---
+# Recommended additions (if not already covered)
+*.swp
+*.swo
+*.swl
+*.swh
+*~
+*.bak
+
+# --- Entries from your existing .gitignore ---
+# Please verify if these are still needed for your current setup
+tt.*
+.tests
+doc/tags  # Vim/NeoVim help tags file (usually safe to ignore)
+debug
+.repro
+foo.*
+*.log     # Log files (duplicate removed, this is standard)
+data      # IMPORTANT: Check if this refers to a directory '.config/nvim/data'
+          # If so, and you want to ignore it, keep this line.
+
+# --- LazyVim / lazy.nvim specific notes ---
+
+# IMPORTANT: Do NOT ignore lazy-lock.json
+# This file locks your plugin versions and should be committed!
+# !lazy-lock.json
+
+# The actual plugin code installed by lazy.nvim.
+# By default, lazy.nvim installs plugins OUTSIDE your .config/nvim directory
+# (e.g., ~/.local/share/nvim/lazy/). You usually DON'T need to ignore it here.
+# If you configured plugins to install *inside* .config/nvim, add that dir here.
+# Example:
+# lazy-plugins/
+
+# --- Other common ignores ---
+# OS-specific files (Optional)
+.DS_Store
+Thumbs.db
+
+# Personal notes or temporary files (Optional)
+# *.local
+# *.local.vim
+# personal_notes.md
