@@ -8,6 +8,9 @@ require("config.lazy")
 require("user.options")
 require("plugins.42header")
 
+-- enable 24bit colors
+vim.opt.termguicolors = true
+
 -- キーマップ設定
 vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true})  -- インサートモード終了
 vim.keymap.set("n", "<leader>q", ":bd<CR>", { desc = "Close buffer" }) -- バッファを閉じる
