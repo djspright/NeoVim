@@ -16,7 +16,7 @@ return {
       persist_size = true,     -- ターミナルのサイズを保持
       direction = "horizontal",     -- float, vertical, horizontal, tab
       close_on_exit = true,    -- プロセスが終了したときにウィンドウを閉じる
-      shell = vim.o.shell,     -- 使用するシェル
+      shell = "/usr/bin/fish",     -- 使用するシェル
       float_opts = {
         border = "curved",     -- 境界線のスタイル
         winblend = 15,         -- 透明度（0-100）
