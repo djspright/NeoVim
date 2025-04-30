@@ -18,6 +18,7 @@ vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true }) -- Ctrl +
 vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true }) -- Ctrl + V でペースト
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true }) -- 次のバッファに移動
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true }) -- 前のバッファに移動
+vim.keymap.set('t', '<C-o>', '<C-\\><C-n>', { noremap = true, silent = true, desc = 'Terminal: Exit to Normal mode'}) -- ターミナルモードを抜ける
 
 -- Windowsのクリップボードと連携
 vim.g.clipboard = {

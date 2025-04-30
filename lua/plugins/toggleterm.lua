@@ -6,7 +6,7 @@ return {
     require("toggleterm").setup({
       -- デフォルト設定
       size = 20,               -- ターミナルの高さ（垂直方向の場合）または幅（水平方向の場合）
-      open_mapping = [[<C-\>]], -- ターミナルを開くキーマッピング（Ctrl+\）
+      open_mapping = [[<leader>t]], -- ターミナルを開くキーマッピング（Ctrl+\）
       hide_numbers = true,     -- 行番号を非表示
       shade_filetypes = {},
       shade_terminals = false,  -- ここを必ずfalseに
