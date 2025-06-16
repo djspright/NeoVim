@@ -21,18 +21,18 @@ vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true
 vim.keymap.set('t', '<C-o>', '<C-\\><C-n>', { noremap = true, silent = true, desc = 'Terminal: Exit to Normal mode'}) -- ターミナルモードを抜ける
 
 -- Windowsのクリップボードと連携
-vim.g.clipboard = {
-  name = 'win32yank-wsl',
-  copy = {
-    ['+'] = 'win32yank.exe -i --crlf',
-    ['*'] = 'win32yank.exe -i --crlf',
-  },
-  paste = {
-    ['+'] = 'win32yank.exe -o --lf',
-    ['*'] = 'win32yank.exe -o --lf',
-  },
-  cache_enabled = 0,
-}
+-- vim.g.clipboard = {
+--   name = 'win32yank-wsl',
+--   copy = {
+--     ['+'] = 'win32yank.exe -i --crlf',
+--     ['*'] = 'win32yank.exe -i --crlf',
+--   },
+--   paste = {
+--     ['+'] = 'win32yank.exe -o --lf',
+--     ['*'] = 'win32yank.exe -o --lf',
+--   },
+--   cache_enabled = 0,
+-- }
 
 -- 最後のバッファを閉じたらダッシュボードを表示
 vim.api.nvim_create_autocmd("User", {
