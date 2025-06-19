@@ -7,13 +7,13 @@ require("plugins.42header")
 vim.opt.termguicolors = true
 
 -- キーマップ設定
-vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true})  -- インサートモード終了
-vim.keymap.set("n", "<leader>q", ":bd<CR>", { desc = "Close buffer" }) -- バッファを閉じる
-vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true }) -- Ctrl + C でコピー
-vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true }) -- Ctrl + V でペースト
-vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true }) -- 次のバッファに移動
-vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true }) -- 前のバッファに移動
-vim.keymap.set('t', '<C-o>', '<C-\\><C-n>', { noremap = true, silent = true, desc = 'Terminal: Exit to Normal mode'}) -- ターミナルモードを抜ける
+vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })                                                  -- インサートモード終了
+vim.keymap.set("n", "<leader>q", ":bd<CR>", { desc = "Close buffer" })                                                 -- バッファを閉じる
+vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true })                                                 -- Ctrl + C でコピー
+vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })                                              -- Ctrl + V でペースト
+vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })                                          -- 次のバッファに移動
+vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })                                    -- 前のバッファに移動
+vim.keymap.set('t', '<C-o>', '<C-\\><C-n>', { noremap = true, silent = true, desc = 'Terminal: Exit to Normal mode' }) -- ターミナルモードを抜ける
 
 -- Windowsのクリップボードと連携
 -- vim.g.clipboard = {
@@ -28,29 +28,6 @@ vim.keymap.set('t', '<C-o>', '<C-\\><C-n>', { noremap = true, silent = true, des
 --   },
 --   cache_enabled = 0,
 -- }
-
--- 最後のバッファを閉じたらダッシュボードを表示
-vim.api.nvim_create_autocmd("User", {
-  pattern = "BdeletePost",
-  callback = function()
-    if #vim.fn.getbufinfo({ buflisted = 1 }) == 0 then
-      vim.cmd("Alpha")
-    end
-  end,
-})
-
--- nvim-cmpの設定が確実に読み込まれたか確認するためのフラグ
-vim.api.nvim_create_autocmd("User",{
-  pattern = "LazyDone",
-  callback = function()
-    local has_cmp, cmp = pcall(require, "cmp")
-    if has_cmp then
-      print("nvim-cmp is loaded")
-    else
-      print("WARNING: nvim-cmp is not loaded")
-    end
-  end,
-})
 
 -- ToggleTermの透明化設定
 vim.api.nvim_create_autocmd("FileType", {
