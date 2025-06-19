@@ -1,8 +1,3 @@
--- LazyVimのnvim-cmp関連extrasを無効化(自分の設定を優先)
-vim.g.lazyvim_plugins_disabled = {
-  "lazyvim.plugins.extras.coding.nvim-cmp"
-}
-
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 require("user.options")
