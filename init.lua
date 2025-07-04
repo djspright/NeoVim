@@ -5,6 +5,8 @@ require("plugins.42header")
 
 -- enable 24bit colors
 vim.opt.termguicolors = true
+-- 行末の1文字先まで移動
+vim.opt.virtualedit = "onemore"
 
 -- キーマップ設定
 vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })                                                  -- インサートモード終了
