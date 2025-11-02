@@ -1,6 +1,7 @@
 {
   "42-C-Formatter.nvim": { "branch": "main", "commit": "f925bedf740e39f500298251e9eaa062667e10e3" },
   "42-header.nvim": { "branch": "main", "commit": "4303be09d9615e9169661b3e5d5a98c3eecee0ff" },
+  "BackAndForward.vim": { "branch": "master", "commit": "09c067217d408b99e8b2b2ccc4170ac32daef934" },
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "LazyVim": { "branch": "main", "commit": "25abbf546d564dc484cf903804661ba12de45507" },
   "SchemaStore.nvim": { "branch": "main", "commit": "eeacd3cb53a1991a3ef18fb0456c9b9bda047c70" },
