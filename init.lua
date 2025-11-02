@@ -7,17 +7,37 @@ require("plugins.42header")
 vim.opt.termguicolors = true
 -- 行末の1文字先まで移動
 vim.opt.virtualedit = "onemore"
+-- クリップボードを
+vim.opt.clipboard = "unnamedplus"
 
 -- キーマップ設定
 vim.keymap.set("i", "jj", "<Esc>", { noremap = true, silent = true })                                                  -- インサートモード終了
 vim.keymap.set("n", "<leader>q", ":bd<CR>", { desc = "Close buffer" })                                                 -- バッファを閉じる
-vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true })                                                 -- Ctrl + C でコピー
-vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true })                                              -- Ctrl + V でペースト
 vim.keymap.set('n', '<Tab>', ':bnext<CR>', { noremap = true, silent = true })                                          -- 次のバッファに移動
 vim.keymap.set('n', '<S-Tab>', ':bprevious<CR>', { noremap = true, silent = true })                                    -- 前のバッファに移動
 vim.keymap.set('t', '<C-o>', '<C-\\><C-n>', { noremap = true, silent = true, desc = 'Terminal: Exit to Normal mode' }) -- ターミナルモードを抜ける
 
--- Windowsのクリップボードと連携
+-- vim.keymap.set('v', '<C-c>', '"+y', { noremap = true, silent = true, desc = 'Copy to clipboard (Ctrl+C)' })                                                 -- Ctrl + C でコピー
+-- vim.keymap.set('i', '<C-v>', '<C-r>+', { noremap = true, silent = true, desc = 'Paste form clipboard (Ctrl+V)' })                                              -- Ctrl + V でペースト
+-- vim.keymap.set('v', '<D-c>', '"+y', { noremap = true, silent = true, desc = 'Copy to clipboard (Cmd+C)' })                                                 -- Cmd + C でコピー
+-- vim.keymap.set('i', '<D-v>', '<C-r>+', { noremap = true, silent = true, desc = 'Paste form clipboard (Ctrl+V)' })                                              -- Cmd + V でペースト
+-- vim.keymap.set('n', '<D-v>', '"+p', { noremap = true, silent = true })                                                 -- Cmd + V でペースト（ノーマルモード）
+-- vim.keymap.set('c', '<D-v>', '<C-r>+', { noremap = true, silent = true })                                              -- Cmd + V でペースト（コマンドモード）
+-- vim.keymap.set('t', '<D-v>', '<C-\\><C-n>"+pi', { noremap = true, silent = true })                                     -- Cmd + V でペースト（ターミナルモード）
+--
+-- vim.g.clipboard = {
+--   name = 'pbcopy',
+--   copy = {
+--     ['+'] = 'pbcopy',
+--     ['*'] = 'pbcopy',
+--   },
+--   paste = {
+--     ['+'] = 'pbcopy',
+--     ['*'] = 'pbcopy',
+--   },
+--   cache_enabled = 0,
+-- }
+
 -- vim.g.clipboard = {
 --   name = 'win32yank-wsl',
 --   copy = {

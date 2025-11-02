@@ -10,10 +10,10 @@ return {
       terminal_colors = true,
       overrides = {
         -- カーソル色を紫に設定
-        Cursor = { fg = "#282A36", bg = "#BD93F9" },
-        iCursor = { fg = "#282A36", bg = "#BD93F9" },
-        lCursor = { fg = "#282A36", bg = "#BD93F9" },
-        CursorIM = { fg = "#282A36", bg = "#BD93F9" },
+        Cursor = { fg = "#11111b", bg = "#59c2c6" },
+        iCursor = { fg = "#11111b", bg = "#59c2c6" },
+        lCursor = { fg = "#11111b", bg = "#59c2c6" },
+        CursorIM = { fg = "#11111b", bg = "#59c2c6" },
       },
     })
 
