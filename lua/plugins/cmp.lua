@@ -14,8 +14,8 @@ return {
       documentation = cmp.config.window.bordered(),
     }
     opts.mapping = cmp.mapping.preset.insert({
-      ["<C-k>"] = cmp.mapping.select_prev_item(),
-      ["<C-j>"] = cmp.mapping.select_next_item(),
+      ["<C-p>"] = cmp.mapping.select_prev_item(), -- 補完メニュー: 前の項目
+      ["<C-n>"] = cmp.mapping.select_next_item(), -- 補完メニュー: 次の項目
       ["<C-Space>"] = cmp.mapping.complete(),
       ["<CR>"] = cmp.mapping.confirm({ select = true }),
       ["<Tab>"] = nil, -- LazyVimのデフォルトTabマッピングを無効化する場合
